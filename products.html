@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | StartupWeb</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <!-- Preloader -->
+    <div id="loader">
+        <div class="spinner-container flex items-center justify-center">
+            <!-- Gear 1 (Big, Center) -->
+            <svg class="gear-common gear-spin gear-1" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                <path d="M12 2v2"></path>
+                <path d="M12 22v-2"></path>
+                <path d="m17 20.66-1-1.73"></path>
+                <path d="M11 10.27 7 3.34"></path>
+                <path d="m20.66 17-1.73-1"></path>
+                <path d="m3.34 7 1.73 1"></path>
+                <path d="M14 12h8"></path>
+                <path d="M2 12h2"></path>
+                <path d="m20.66 7-1.73 1"></path>
+                <path d="m3.34 17 1.73-1"></path>
+                <path d="m17 3.34-1 1.73"></path>
+                <path d="m7 20.66 1-1.73"></path>
+            </svg>
+
+            <!-- Gear 2 (Small, Top-Left) -->
+            <svg class="gear-common gear-spin-reverse gear-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                <path d="M12 2v2"></path>
+                <path d="M12 22v-2"></path>
+                <path d="m17 20.66-1-1.73"></path>
+                <path d="M11 10.27 7 3.34"></path>
+                <path d="m20.66 17-1.73-1"></path>
+                <path d="m3.34 7 1.73 1"></path>
+                <path d="M14 12h8"></path>
+                <path d="M2 12h2"></path>
+                <path d="m20.66 7-1.73 1"></path>
+                <path d="m3.34 17 1.73-1"></path>
+                <path d="m17 3.34-1 1.73"></path>
+                <path d="m7 20.66 1-1.73"></path>
+            </svg>
+
+            <!-- Gear 3 (Small, Bottom-Right) -->
+            <svg class="gear-common gear-spin-reverse gear-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                <path d="M12 2v2"></path>
+                <path d="M12 22v-2"></path>
+                <path d="m17 20.66-1-1.73"></path>
+                <path d="M11 10.27 7 3.34"></path>
+                <path d="m20.66 17-1.73-1"></path>
+                <path d="m3.34 7 1.73 1"></path>
+                <path d="M14 12h8"></path>
+                <path d="M2 12h2"></path>
+                <path d="m20.66 7-1.73 1"></path>
+                <path d="m3.34 17 1.73-1"></path>
+                <path d="m17 3.34-1 1.73"></path>
+                <path d="m7 20.66 1-1.73"></path>
+            </svg>
+        </div>
+        <div class="loader-text mt-4">Loading Synergy...</div>
+    </div>
+    <!-- Header with Active state for Products -->
+    <a href="https://wa.me/911234567890" target="_blank"
+        class="whatsapp-float flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl">
+        <div class="whatsapp-pulse"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="none">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .006 5.408 0 12.045c0 2.121.554 4.189 1.605 6.006L0 24l6.115-1.605a11.83 11.83 0 005.932 1.577h.005c6.635 0 12.041-5.408 12.046-12.047a11.82 11.82 0 00-3.483-8.43" />
+        </svg>
+    </a>
+
+    <!-- Top Bar Removed -->
+
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="bg-brand-orange p-1.5 rounded-lg transition-transform group-hover:rotate-45 duration-300">
+                    <i data-lucide="cog" class="w-6 h-6 text-white"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tighter text-gray-900 font-outfit">Startup<span
+                        class="text-brand-orange">Web</span></span>
+            </a>
+
+            <div class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="solutions.html" class="nav-link">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link text-brand-orange">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-right-group">
+                <a href="contact.html"
+                    class="nav-cta-button btn-orange px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full">
+                    Inquire Now
+                </a>
+                <div class="profile-dropdown-container relative">
+                    <button class="profile-toggle-btn hover:bg-gray-100 rounded-full transition-colors relative z-[60]"
+                        aria-label="User Profile">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                    </button>
+                    <div id="profile-dropdown" class="dropdown-menu">
+                        <a href="login.html" class="dropdown-item">Login</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="signup.html" class="dropdown-item">Sign Up</a>
+                    </div>
+                </div>
+                <button class="mobile-toggle-btn lg:hidden text-gray-800 relative z-[60]" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="lg:hidden">
+        <!-- Backdrop -->
+        <div id="mobile-menu-backdrop"></div>
+
+        <!-- Menu Panel -->
+        <div id="mobile-menu-panel">
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <span class="text-2xl font-bold tracking-tighter text-gray-900 font-outfit">Startup<span
+                        class="text-brand-orange">Web</span></span>
+                <button
+                    class="close-menu-btn w-11 h-11 flex items-center justify-center ring-1 ring-gray-100 rounded-lg text-gray-500 hover:text-gray-900 transition-colors">
+                    <i data-lucide="x" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <div
+                class="flex-1 px-6 py-10 flex flex-col space-y-6 font-bold text-sm uppercase tracking-widest overflow-y-auto">
+                <a href="index.html" class="hover:text-brand-orange transition-colors">Home</a>
+                <a href="solutions.html" class="hover:text-brand-orange transition-colors">Home2</a>
+                <a href="about.html" class="hover:text-brand-orange transition-colors">About Us</a>
+                <a href="infrastructure.html" class="hover:text-brand-orange transition-colors">Infrastructure</a>
+                <a href="products.html" class="text-brand-orange">Products</a>
+                <a href="careers.html" class="hover:text-brand-orange transition-colors">Careers</a>
+                <a href="contact.html" class="hover:text-brand-orange transition-colors">Contact</a>
+            </div>
+            <div class="p-6 border-t border-gray-100">
+                <a href="contact.html"
+                    class="block w-full text-center bg-[#ff6b00] text-white py-4 rounded-full font-bold uppercase tracking-widest text-[10px] shadow-lg shadow-orange-500/20">
+                    Inquire Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero -->
+    <section class="relative h-[60vh] flex items-center overflow-hidden bg-zinc-800">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="w-full h-full bg-[url('https://plus.unsplash.com/premium_photo-1677009835876-4a29ddc4cc2c?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-50">
+            </div>
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white uppercase mb-4">Precision Components</h1>
+            <p class="text-xl text-gray-300 font-light max-w-3xl mx-auto">Engineered to exact specifications for
+                critical applications.</p>
+        </div>
+    </section>
+    <!-- Product Showcase -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-20">
+                <h2 class="text-sm font-bold text-brand-orange tracking-[0.3em] uppercase mb-4">
+                    Our Portfolio
+                </h2>
+                <h3 class="text-5xl font-bold uppercase">
+                    The ITECH Collection
+                </h3>
+            </div>
+
+
+            <!-- Product Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-28">
+
+                <!-- Product 1 -->
+                <div class="group bg-white rounded-xl overflow-hidden hover:shadow-xl transition">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580983561371-7f4b242d8ec0?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold uppercase mb-4">Transmission Gears</h3>
+                        <p class="text-gray-600 text-sm mb-6">
+                            High-precision gears designed for maximum torque transmission and durability.
+                        </p>
+                        <a class="text-xs font-bold tracking-widest uppercase text-brand-orange">
+                            Tech Specs →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group bg-white rounded-xl overflow-hidden hover:shadow-xl transition">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1723629618967-4bf1d50622f7?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold uppercase mb-4">Precision Shafts</h3>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Turned and ground shafts with micron-level tolerances for heavy-duty applications.
+                        </p>
+                        <a class="text-xs font-bold tracking-widest uppercase text-brand-orange">
+                            Tech Specs →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group bg-white rounded-xl overflow-hidden hover:shadow-xl transition">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540324155974-7523202daa3f?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold uppercase mb-4">Hydraulic Fittings</h3>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Leak-proof, high-pressure fittings tested beyond industry standards.
+                        </p>
+                        <a class="text-xs font-bold tracking-widest uppercase text-brand-orange">
+                            Tech Specs →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sector Information -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+
+                <div>
+                    <h3 class="text-2xl font-bold uppercase border-b-2 border-brand-orange pb-4 mb-6">
+                        Automotive Sector
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Our automotive division specializes in engine, transmission, and braking systems.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 marker:text-brand-orange text-gray-500">
+                        <li>Camshafts & Crankshafts</li>
+                        <li>Planetary Gear Systems</li>
+                        <li>Hydraulic Cylinders</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold uppercase border-b-2 border-brand-orange pb-4 mb-6">
+                        Aerospace & Defense
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Certified components for high-stress aerospace and defense environments.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 marker:text-brand-orange text-gray-500">
+                        <li>Landing Gear Bushings</li>
+                        <li>Turbine Blade Mounts</li>
+                        <li>Titanium Fasteners</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer same as typical template -->
+    <footer class="bg-zinc-950 text-white pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Footer content same as template -->
+                <div class="space-y-6">
+                    <div class="space-y-4">
+                        <a href="index.html" class="flex items-center gap-2 group">
+                            <div
+                                class="bg-brand-orange p-1.5 rounded-lg transition-transform group-hover:rotate-45 duration-300">
+                                <i data-lucide="cog" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <span class="text-2xl font-bold tracking-tighter text-white font-outfit">Startup<span
+                                    class="text-brand-orange">Web</span></span>
+                        </a>
+                       
+                    </div>
+                    <p class="text-sm text-gray-500 leading-relaxed max-w-xs">Redefining precision and synergy in the
+                        industrial sector.</p>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8 text-brand-orange">Pages</h5>
+                    <ul
+                        class="space-y-4 md:space-y-0 text-sm text-gray-400 grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Home2</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="infrastructure.html" class="hover:text-white transition-colors">Infrastructure</a>
+                        </li>
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8 text-brand-orange">Connect</h5>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin"
+                                class="w-4 h-4 text-brand-orange mt-1"></i> Industrial Zone Delta, Plot 45, Chennai -
+                            Hub</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone"
+                                class="w-4 h-4 text-brand-orange"></i> +91 99999 99999</li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-brand-orange"></i>
+                            biz@startupweb.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8 text-brand-orange">Stay Updated</h5>
+                    <div class="relative">
+                        <input type="text" placeholder="Corporate Email"
+                            class="bg-white/10 border-none px-6 py-4 rounded-full w-full text-sm outline-none focus:bg-white/20 transition-all mb-2">
+                        <button
+                            class="absolute right-2 top-2 bg-brand-orange p-2 rounded-full hover:brightness-110 transition-all">
+                            <i data-lucide="send" class="w-4 h-4 text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">&copy; 2026 StartupWeb.
+                            All rights reserved.</p>
+                <div class="flex gap-6 text-gray-600">
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i data-lucide="linkedin"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i data-lucide="twitter"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i data-lucide="instagram"
+                            class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

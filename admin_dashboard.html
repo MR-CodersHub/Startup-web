@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | StartupWeb</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-orange': '#ff6b00',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50">
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar hidden md:block">
+            <div class="sidebar-header">
+                <span class="text-2xl font-bold tracking-tighter text-gray-900 font-outfit">Startup<span
+                        class="text-brand-orange">Web</span></span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#stats" class="nav-item active"><i data-lucide="layout-dashboard" class="w-5 h-5"></i> Admin
+                    Dashboard</a>
+                <a href="#users" class="nav-item"><i data-lucide="users" class="w-5 h-5"></i> Users</a>
+                <a href="#logs" class="nav-item"><i data-lucide="file-text" class="w-5 h-5"></i> Activity Logs</a>
+                <a href="#" class="nav-item logout-link"><i data-lucide="log-out" class="w-5 h-5"></i>
+                    Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="md:hidden flex justify-between items-center mb-6 bg-white p-4 rounded-lg shadow-sm">
+                <span class="text-xl font-bold">Admin Panel</span>
+                <a href="#" class="text-gray-600 logout-link"><i data-lucide="log-out"></i></a>
+            </div>
+
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-bold text-gray-800">Administrator Overview</h1>
+            </div>
+
+            <div id="dashboard-message"
+                class="hidden bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded mb-6"></div>
+
+            <!-- Stats Grid -->
+            <div id="stats" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="card stat-card bg-gradient-to-r from-zinc-800 to-zinc-900 text-white">
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-widest text-gray-400">Total Users</p>
+                        <p id="stat-total-users" class="text-3xl font-bold">0</p>
+                    </div>
+                    <i data-lucide="users" class="w-8 h-8 text-brand-orange"></i>
+                </div>
+                <div class="card stat-card bg-white">
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-widest text-gray-500">Active Users</p>
+                        <p id="stat-active-users" class="text-3xl font-bold text-green-600">0</p>
+                    </div>
+                    <i data-lucide="activity" class="w-8 h-8 text-green-600"></i>
+                </div>
+                <div class="card stat-card bg-white">
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-widest text-gray-500">Activities (24h)</p>
+                        <p id="stat-activities" class="text-3xl font-bold text-brand-orange">0</p>
+                    </div>
+                    <i data-lucide="clock" class="w-8 h-8 text-brand-orange"></i>
+                </div>
+            </div>
+
+            <!-- Users Table -->
+            <div id="users" class="card mb-8">
+                <div class="flex justify-between items-center mb-4 border-b pb-4">
+                    <h2 class="text-lg font-bold uppercase tracking-wide">Registered Users</h2>
+                </div>
+                <div class="table-container">
+                    <table id="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Joined</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Global Logs -->
+            <div id="logs" class="card">
+                <h2 class="text-lg font-bold mb-4 uppercase tracking-wide border-b pb-2">System Activity Log</h2>
+                <div class="table-container">
+                    <table id="logs-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/admin_dashboard.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

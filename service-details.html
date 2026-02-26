@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | StartupWeb</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .service-gradient {
+            background: linear-gradient(135deg, #fff 0%, #fff7f2 100%);
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ff6b00;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-50 glass-nav shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="bg-brand-orange p-1.5 rounded-lg transition-transform group-hover:rotate-45 duration-300">
+                    <i data-lucide="cog" class="w-6 h-6 text-white"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tighter text-gray-900 font-outfit">Startup<span
+                        class="text-brand-orange">Web</span></span>
+            </a>
+            <div
+                class="hidden lg:flex items-center space-x-8 font-bold text-xs uppercase tracking-widest text-gray-700">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="solutions.html" class="nav-link text-[#ff6b00]">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right-group">
+                <a href="contact.html"
+                    class="nav-cta-button bg-[#ff6b00] text-white px-7 py-3 text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-black transition-colors shadow-lg shadow-orange-500/20">
+                    Inquire Now
+                </a>
+                <div class="profile-dropdown-container relative">
+                    <button class="profile-toggle-btn hover:bg-gray-100 rounded-full transition-colors relative z-[60]"
+                        aria-label="User Profile">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                    </button>
+                    <div id="profile-dropdown" class="dropdown-menu">
+                        <a href="login.html" class="dropdown-item">Login</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="signup.html" class="dropdown-item">Sign Up</a>
+                    </div>
+                </div>
+                <button class="mobile-toggle-btn lg:hidden text-gray-800 relative z-[60]" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="lg:hidden">
+        <!-- Backdrop -->
+        <div id="mobile-menu-backdrop"></div>
+
+        <!-- Menu Panel -->
+        <div id="mobile-menu-panel">
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <span class="text-2xl font-bold tracking-tighter text-gray-900 font-outfit">Startup<span
+                        class="text-brand-orange">Web</span></span>
+                <button
+                    class="close-menu-btn w-11 h-11 flex items-center justify-center ring-1 ring-gray-100 rounded-lg text-gray-500 hover:text-gray-900 transition-colors">
+                    <i data-lucide="x" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <div
+                class="flex-1 px-6 py-10 flex flex-col space-y-6 font-bold text-sm uppercase tracking-widest overflow-y-auto">
+                <a href="index.html" class="hover:text-[#ff6b00] transition-colors">Home</a>
+                <a href="solutions.html" class="text-[#ff6b00]">Home2</a>
+                <a href="about.html" class="hover:text-[#ff6b00] transition-colors">About Us</a>
+                <a href="infrastructure.html" class="hover:text-[#ff6b00] transition-colors">Infrastructure</a>
+                <a href="products.html" class="hover:text-[#ff6b00] transition-colors">Products</a>
+                <a href="careers.html" class="hover:text-[#ff6b00] transition-colors">Careers</a>
+                <a href="contact.html" class="hover:text-[#ff6b00] transition-colors">Contact</a>
+            </div>
+            <div class="p-6 border-t border-gray-100">
+                <a href="contact.html"
+                    class="block w-full text-center bg-[#ff6b00] text-white py-4 rounded-full font-bold uppercase tracking-widest text-[10px] shadow-lg shadow-orange-500/20">
+                    Inquire Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="service-gradient py-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center space-y-6 animate-fade-in">
+            <div id="service-icon-container"
+                class="w-20 h-20 bg-white rounded-3xl flex items-center justify-center mx-auto shadow-xl border border-orange-50 mb-8">
+                <!-- Icon injected by JS -->
+            </div>
+            <h1 id="service-title"
+                class="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter leading-tight">
+                Service Loading...
+            </h1>
+            <p id="service-tagline" class="text-xl text-gray-500 font-light max-w-2xl mx-auto leading-relaxed">
+                Loading professional industrial solutions tailored for global scalability.
+            </p>
+            <div class="pt-4">
+                <a href="contact.html"
+                    class="bg-[#ff6b00] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-[11px] shadow-xl shadow-orange-500/20 hover:bg-black transition-all inline-block hover:scale-105">
+                    Inquire Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview & What We Offer -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div class="space-y-8">
+                <h2 class="text-xs font-bold text-[#ff6b00] tracking-[0.4em] uppercase">Overview</h2>
+                <div id="service-overview" class="text-gray-600 text-lg leading-relaxed space-y-4">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+            <div class="bg-gray-50 p-10 md:p-16 rounded-[40px] border border-gray-100">
+                <h3 class="text-xl font-bold uppercase mb-8">What We Offer</h3>
+                <ul id="service-offerings" class="space-y-6">
+                    <!-- Dynamic List -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-[#ff6b00] tracking-[0.4em] uppercase">Key Features</h2>
+                <h3 class="text-4xl font-black uppercase tracking-tighter">Strategic Advantages</h3>
+            </div>
+            <div id="service-features" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Dynamic cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries & Process -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-12">
+                <div class="space-y-4">
+                    <h2 class="text-xs font-bold text-[#ff6b00] tracking-[0.4em] uppercase">Industries Served</h2>
+                    <h3 class="text-4xl font-black uppercase tracking-tighter leading-tight">Global Sector <br> Impact
+                    </h3>
+                </div>
+                <div id="service-industries" class="flex flex-wrap gap-4">
+                    <!-- Dynamic badges -->
+                </div>
+                <div class="p-8 bg-zinc-950 text-white rounded-[30px] shadow-2xl">
+                    <h4 class="text-lg font-bold uppercase mb-4 text-[#ff6b00]">Quality Standards</h4>
+                    <p id="service-standards" class="text-gray-400 text-sm leading-relaxed">
+                        Exceeding international benchmarks including ISO/TS 16949 and AS9100 Rev D.
+                    </p>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="bg-white p-8 md:p-12 rounded-[50px] shadow-2xl border border-gray-100">
+                    <h3 class="text-2xl font-bold uppercase mb-10">Our Process</h3>
+                    <div id="service-process" class="space-y-10">
+                        <!-- Dynamic process steps -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-[#ff6b00] tracking-[0.4em] uppercase">Inquiries</h2>
+                <h3 class="text-4xl font-black uppercase tracking-tighter">Frequently Asked Questions</h3>
+            </div>
+            <div id="service-faqs" class="space-y-4">
+                <!-- Dynamic FAQs -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 px-6 bg-white overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto relative bg-[#ff6b00] rounded-[50px] p-12 md:p-24 text-center shadow-2xl shadow-orange-500/30">
+            <div class="absolute inset-0 bg-black/5"></div>
+            <div class="relative z-10 space-y-10">
+                <h3 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-tight">
+                    Accelerate Your <br> Project Scale.</h3>
+                <p class="text-white/80 text-xl font-light max-w-2xl mx-auto leading-relaxed">Deployment experts ready
+                    to integrate our solutions into your current ecosystem.</p>
+                <div class="flex justify-center">
+                    <a href="contact.html"
+                        class="bg-white text-[#ff6b00] px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[11px] shadow-xl hover:scale-105 transition-transform">Get
+                        Started Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 text-white pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 group">
+                            <div
+                                class="bg-brand-orange p-1.5 rounded-lg transition-transform group-hover:rotate-45 duration-300">
+                                <i data-lucide="cog" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <span class="text-2xl font-bold tracking-tighter text-white font-outfit">Startup<span
+                                    class="text-brand-orange">Web</span></span>
+                        </div>
+                        
+                    </div>
+                    <p class="text-sm text-gray-500 leading-relaxed max-w-xs">Precision engineering and high-fidelity
+                        manufacturing systems for the global industrial landscape.</p>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8 text-[#ff6b00]">Company</h5>
+                    <ul class="space-y-4 text-xs font-bold uppercase tracking-widest text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="infrastructure.html" class="hover:text-white transition-colors">Infrastructure</a>
+                        </li>
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8 text-[#ff6b00]">Legal</h5>
+                    <ul class="space-y-4 text-xs font-bold uppercase tracking-widest text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h5 class="text-xs font-bold uppercase tracking-widest mb-8 text-brand-orange">Stay Updated</h5>
+                    <div class="relative">
+                        <input type="text" placeholder="Corporate Email"
+                            class="bg-white/10 border-none px-6 py-4 rounded-full w-full text-sm outline-none focus:bg-white/20 transition-all mb-2">
+                        <button
+                            class="absolute right-2 top-2 bg-brand-orange p-2 rounded-full hover:brightness-110 transition-all">
+                            <i data-lucide="send" class="w-4 h-4 text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-center">
+               <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">&copy; 2026 StartupWeb.
+                            All rights reserved.</p>
+                <div class="flex gap-6 text-gray-600">
+                    <a href="#" class="hover:text-[#ff6b00] transition-colors"><i data-lucide="linkedin"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-[#ff6b00] transition-colors"><i data-lucide="twitter"
+                            class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/service-details.js"></script>
+</body>
+
+</html>
