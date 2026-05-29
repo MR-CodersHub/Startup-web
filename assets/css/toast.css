@@ -1,0 +1,42 @@
+/* Inline Notification Styles */
+.notification-inline {
+    padding: 10px 14px;
+    margin-top: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.notification-inline.error {
+    background-color: #FEF2F2;
+    color: #991B1B;
+    border: 1px solid #FCA5A5;
+}
+
+.notification-inline.success {
+    background-color: #ECFDF5;
+    color: #065F46;
+    border: 1px solid #6EE7B7;
+}
+
+.notification-inline.info {
+    background-color: #EFF6FF;
+    color: #1E40AF;
+    border: 1px solid #93C5FD;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
